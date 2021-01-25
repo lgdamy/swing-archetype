@@ -1,0 +1,12 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+
+#include:
+#  - project: 'NAMESPACE/NAMESPACE-devops'
+#    file: '/.gitlab-ci-template.yml'
+
+include:
+- project: 'backoffice/backoffice-devops'
+  #ref: master -> usar configs de ambientes por branches
+  file: '/.gitlab-ci-template.yml'
