@@ -11,4 +11,4 @@
 Como eu utilizei o UI Designer do Intellij para montar o esqueleto, talvez não seja possível executar ele manualmente em outra IDE.
 Depois eu vou buscar um plugin do maven que transforma o form do Intellij em código em compile-time, tenho certeza que isso existe
 
-`EDIT:` O código que o Form do Intellij cria agora fica comentado no `(...)Panel.java`, se estiver em outra IDE, basta descomentar o código depois que o projeto foi criado. Contudo, montar um JPanel complexo sem ajuda de nenhuma ferramenta é uma tarefa para poucos...
+`EDIT:` Agora o archetype ja tem embutido o javac2 em um plugin do ant dentro do maven, o lado negativo é que o código fica com 1.7M de código proprietário da Jetbrains, como o projeto não está monetizado, não há necessidade de preocupação. Porém haverá a necessidade de comprar/produzir uma ferramenta com funcionalidade parecida com o javac2 futuramente. Se alguém já fez isso e gostaria de dividir comigo, eu seria infinitamente grato :wink:
