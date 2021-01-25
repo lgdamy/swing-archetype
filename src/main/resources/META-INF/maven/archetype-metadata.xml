@@ -8,6 +8,9 @@
     <requiredProperty key="project-name-lowercase">
       <defaultValue>${artifactId.replaceAll(" ", "").replaceAll("_", "").replaceAll("-", "")}</defaultValue>
     </requiredProperty>
+    <requiredProperty key="project-name-uppercase">
+      <defaultValue>${artifactId.substring(0,1).toUpperCase()}${artifactId.substring(1).replaceAll(" ", "").replaceAll("_", "").replaceAll("-", "")}</defaultValue>
+   </requiredProperty>
     <requiredProperty key="groupId">
       <defaultValue>com.damytec</defaultValue>
     </requiredProperty>
