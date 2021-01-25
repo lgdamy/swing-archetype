@@ -10,3 +10,5 @@
   
 Como eu utilizei o UI Designer do Intellij para montar o esqueleto, talvez não seja possível executar ele manualmente em outra IDE.
 Depois eu vou buscar um plugin do maven que transforma o form do Intellij em código em compile-time, tenho certeza que isso existe
+
+`EDIT:` O código que o Form do Intellij cria agora fica comentado no `(...)Panel.java`, se estiver em outra IDE, basta descomentar o código depois que o projeto foi criado. Contudo, montar um JPanel complexo sem ajuda de nenhuma ferramenta é uma tarefa para poucos...
