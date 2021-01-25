@@ -1,3 +1,4 @@
+#set( $symbol_dollar = '$' )
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -48,6 +49,42 @@
                 <configuration>
                     <encoding>UTF-8</encoding>
                 </configuration>
+            </plugin>
+	    <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.sun</groupId>
+                        <artifactId>tools</artifactId>
+                        <version>1.7.0</version>
+                        <scope>system</scope>
+                        <systemPath>${symbol_dollar}{java.home}/../lib/tools.jar</systemPath>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <configuration>
+                            <tasks>
+                                <path id="j2cp">
+                                    <fileset dir="${symbol_dollar}{project.basedir}/src/main/resources/antlibs" includes="*.jar"/>
+                                </path>
+                                <path id="j2sp">
+                                    <pathelement location="${symbol_dollar}{project.basedir}/src/main/java"/> 
+                                </path>
+
+                                <taskdef name="javac2" classpathref="j2cp" classname="com.intellij.ant.Javac2"/>
+                                <javac2 destdir="${symbol_dollar}{project.basedir}\target\classes">
+                                    <src refid="j2sp"/>
+                                </javac2>
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
