@@ -8,6 +8,8 @@
   - `mvn archetype:generate -DarchetypeGroupId=com.damytec -DarchetypeArtifactId=swing-archetype`
   - A main do projeto, como descrita no manifest, está em com.damytec.nomedoprojeto.App.java
   
+![Imagem ilustrativa do layout da pagina](https://github.com/lgdamy/swing-archetype/blob/assets/screenshot.png)
+  
 Como eu utilizei o UI Designer do Intellij para montar o esqueleto, talvez não seja possível executar ele manualmente em outra IDE.
 Depois eu vou buscar um plugin do maven que transforma o form do Intellij em código em compile-time, tenho certeza que isso existe
 
