@@ -4,7 +4,7 @@
 - Para utilizar
   - Deve-se primeiro gravar o archetype no m2 local
   - `mvn install`
-  - Depois deve-se is à pasta em que o projeto vai estar localizado (A pasta deve estar vazia)
+  - Depois deve-se ir à pasta em que o projeto vai estar localizado (A pasta deve estar vazia)
   - `mvn archetype:generate -DarchetypeGroupId=com.damytec -DarchetypeArtifactId=swing-archetype`
   - A main do projeto, como descrita no manifest, está em com.damytec.nomedoprojeto.App.java
   
