@@ -75,7 +75,7 @@
                                 </path>
 
                                 <taskdef name="javac2" classpathref="j2cp" classname="com.intellij.ant.Javac2"/>
-                                <javac2 destdir="${symbol_dollar}{project.basedir}\target\classes">
+                                <javac2 destdir="${symbol_dollar}{project.basedir}\target\classes" includeantruntime="false">
                                     <src refid="j2sp"/>
                                 </javac2>
                             </tasks>
